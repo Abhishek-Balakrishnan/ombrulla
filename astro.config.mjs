@@ -7,4 +7,5 @@ import '@fontsource/space-grotesk';
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://Abhishek-Balakrishnan.github.io',
+  base: '/ombrulla',
 });
