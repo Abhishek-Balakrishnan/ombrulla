@@ -8,6 +8,8 @@ export default {
 			  },
 			  colors:{
 				'bodycolor':'#f8fbff',
+				'primary':'#004eff',
+				'secondary':'#001a53'
 			  },
 		},
 	},

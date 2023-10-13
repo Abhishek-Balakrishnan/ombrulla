@@ -1,84 +1,93 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
-import Menu from  '../components/Menu.astro';
-import Banner from '../components/Banner.astro';
-import Content from '../components/Content.astro';
-import Card1 from '../components/Card1.astro';
+import Layout from "../layouts/Layout.astro";
+import Menu from "../components/Menu.astro";
+import Banner from "../components/Banner.astro";
+import Content from "../components/Content.astro";
+import ServiceCard from "../components/ServiceCard.astro";
 // import Services from '../components/Services.astro';
-import Service from '../components/Service';
+import Service from "../components/Service";
+
+const services = [
+	{
+		title: "Integrating drones, 3D scanning, and AI in infrastructure inspection improves efficiency, safety, and cost-effectiveness.",
+		subTitle: "AI Infrastructure Inspection",
+		features: [
+			{
+				feature: "Cutting-Edge Solution",
+				details: "Ombrulla leverages AI, drones, and IoT technologies to transform infrastructure inspection.",
+			},
+			{
+				feature: "Real-Time Insights",
+				details: "Real-time insights enhance inspection efficiency, safety, and reduce conventional challenges",
+			},
+			{
+				feature: "Longevity and Cost-Effectiveness",
+				details: "Ombrulla ensures the longevity and safety of critical infrastructure while offering a cost-effective solution.",
+			},
+			{
+				feature: "Responsive Maintenance",
+				details: "Embracing Ombrulla enhances infrastructure management, increasing reliability and responsiveness, and reducing risks",
+			},
+		],
+	},
+	{
+		title: "Enhancing Manufacturing Quality with Computer Vision and Machine Learning-Driven Automated Visual Inspection",
+		subTitle: "AI Defect Detection",
+		features: [
+			{
+				feature: "Automated Defect Detection",
+				details: "Automated visual inspection in manufacturing uses computer vision and machine learning to identify defects autonomously.",
+			},
+			{
+				feature: "Advanced Image Processing",
+				details: "It captures and enhances digital images for relevant feature extraction",
+			},
+			{
+				feature: "Informed Decision-Making",
+				details: "The system classifies defects, aiding manufacturers in quality control decisions",
+			},
+			{
+				feature: "Real-Time Quality Assurance",
+				details: "Integration with manufacturing enables real-time quality control, reducing substandard product risks",
+			},
+		],
+	},
+	{
+		title: "Data-driven decision-making with AI can help businesses make better decisions that can have a real impact on their bottom line.",
+		subTitle: "AI Data Analytics",
+		features: [
+			{
+				feature: "Actionable Insights",
+				details: "AI data analytics provides actionable insights, enabling better decision-making and personalized customer experiences.",
+			},
+			{
+				feature: "Increased Customer Loyalty",
+				details: "Personalized recommendations and services enhance customer satisfaction, leading to higher loyalty and retention rates.",
+			},
+			{
+				feature: "Quality Assurance",
+				details: "AI analytics identifies and mitigates potential issues, ensuring product and service quality and reliability.",
+			},
+			{
+				feature: "Efficiency and Responsiveness",
+				details: "Customers benefit from increased efficiency, improved product quality, and more responsive interactions with businesses.",
+			},
+		],
+	},
+];
 ---
 
-<Layout title="Welcome to Astro.">
-
+<Layout title="Ombrulla">
 	<!-- <Navbar/> -->
-	<div class="grid row-auto	">
-		<div><Menu/></div>
-		<div><Banner/></div>
-		<div><Content/></div> 
-		<div class="mb-56"><Card1/></div> 
-		<div class="mt-96 mb-56"><Card1/></div> 
-		<div class="mt-96 mb-56"><Card1/></div>
-		<div class="mt-96"><Service/></div>
+	<div class="grid row-auto h-screen">
+		<div class="h-screen">
+			<div><Menu /></div>
+			<div><Banner /></div>
+			<div><Content /></div>
+		</div>
+		{services.map((d, i) => <ServiceCard index={i} {...d}/>)}
+		<div class="mt-96"><Service /></div>
 	</div>
 </Layout>
 
-
-<style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
-</style>
+<style></style>
