@@ -7,6 +7,6 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), react()],
-  site: 'https://Abhishek-Balakrishnan.github.io'
-  // base: '/ombrulla',
+  site: 'https://Abhishek-Balakrishnan.github.io',
+  base: '/ombrulla',
 });
