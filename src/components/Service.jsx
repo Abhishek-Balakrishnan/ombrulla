@@ -19,7 +19,7 @@ const incentives = [
 
 export default function Example() {
   return (
-    <div className="">
+    <div className="px-[10vw]">
       <div className="   px- py-24 sm:px- lg:px-">
         <div className="   h-[32rem] bg-gray-50  py-16 ">
           <div className="mx-auto max-w-xl lg:max-w-none">

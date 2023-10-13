@@ -98,11 +98,11 @@ const services = [
 <Layout title="Ombrulla">
 	<!-- <Navbar/> -->
 	<div class="grid row-auto h-screen">
-		<div class="h-screen">
+		<div class="px-[10vw]">
 			<div><Menu /></div>
 			<div><Banner /></div>
-			<div><Content /></div>
 		</div>
+		<div><Content /></div>
 		{services.map((d, i) => <ServiceCard index={i} {...d} />)}
 		<div class="mt-96"><Service /></div>
 		<div><Product /></div>

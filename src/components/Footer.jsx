@@ -204,12 +204,12 @@ export default function Example() {
                 <h3 className="text-lg font-semibold leading-6 ">Reach Us</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.addresses.map((item) => (
-                    <li key={item.addresses}>
+                    <li key={item.href}>
                       <a
                         href={item.href}
                         className="text-sm leading-6  hover:text-gray-900"
                       >
-                        {/* <p>{item.addresses.country}</p> */}
+                        <p>{item.country}</p>
                         
                       </a> 
                       
