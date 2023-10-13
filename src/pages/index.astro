@@ -6,6 +6,12 @@ import Content from "../components/Content.astro";
 import ServiceCard from "../components/ServiceCard.astro";
 // import Services from '../components/Services.astro';
 import Service from "../components/Service";
+import Product from "../components/Product";
+import Customers from "../components/Customers";
+import Testimonials from "../components/Testimonials";
+import Partners from "../components/Partners";
+import Blog from "../components/Blog";
+import Footer from "../components/Footer";
 
 const services = [
 	{
@@ -14,19 +20,23 @@ const services = [
 		features: [
 			{
 				feature: "Cutting-Edge Solution",
-				details: "Ombrulla leverages AI, drones, and IoT technologies to transform infrastructure inspection.",
+				details:
+					"Ombrulla leverages AI, drones, and IoT technologies to transform infrastructure inspection.",
 			},
 			{
 				feature: "Real-Time Insights",
-				details: "Real-time insights enhance inspection efficiency, safety, and reduce conventional challenges",
+				details:
+					"Real-time insights enhance inspection efficiency, safety, and reduce conventional challenges",
 			},
 			{
 				feature: "Longevity and Cost-Effectiveness",
-				details: "Ombrulla ensures the longevity and safety of critical infrastructure while offering a cost-effective solution.",
+				details:
+					"Ombrulla ensures the longevity and safety of critical infrastructure while offering a cost-effective solution.",
 			},
 			{
 				feature: "Responsive Maintenance",
-				details: "Embracing Ombrulla enhances infrastructure management, increasing reliability and responsiveness, and reducing risks",
+				details:
+					"Embracing Ombrulla enhances infrastructure management, increasing reliability and responsiveness, and reducing risks",
 			},
 		],
 	},
@@ -36,19 +46,23 @@ const services = [
 		features: [
 			{
 				feature: "Automated Defect Detection",
-				details: "Automated visual inspection in manufacturing uses computer vision and machine learning to identify defects autonomously.",
+				details:
+					"Automated visual inspection in manufacturing uses computer vision and machine learning to identify defects autonomously.",
 			},
 			{
 				feature: "Advanced Image Processing",
-				details: "It captures and enhances digital images for relevant feature extraction",
+				details:
+					"It captures and enhances digital images for relevant feature extraction",
 			},
 			{
 				feature: "Informed Decision-Making",
-				details: "The system classifies defects, aiding manufacturers in quality control decisions",
+				details:
+					"The system classifies defects, aiding manufacturers in quality control decisions",
 			},
 			{
 				feature: "Real-Time Quality Assurance",
-				details: "Integration with manufacturing enables real-time quality control, reducing substandard product risks",
+				details:
+					"Integration with manufacturing enables real-time quality control, reducing substandard product risks",
 			},
 		],
 	},
@@ -58,19 +72,23 @@ const services = [
 		features: [
 			{
 				feature: "Actionable Insights",
-				details: "AI data analytics provides actionable insights, enabling better decision-making and personalized customer experiences.",
+				details:
+					"AI data analytics provides actionable insights, enabling better decision-making and personalized customer experiences.",
 			},
 			{
 				feature: "Increased Customer Loyalty",
-				details: "Personalized recommendations and services enhance customer satisfaction, leading to higher loyalty and retention rates.",
+				details:
+					"Personalized recommendations and services enhance customer satisfaction, leading to higher loyalty and retention rates.",
 			},
 			{
 				feature: "Quality Assurance",
-				details: "AI analytics identifies and mitigates potential issues, ensuring product and service quality and reliability.",
+				details:
+					"AI analytics identifies and mitigates potential issues, ensuring product and service quality and reliability.",
 			},
 			{
 				feature: "Efficiency and Responsiveness",
-				details: "Customers benefit from increased efficiency, improved product quality, and more responsive interactions with businesses.",
+				details:
+					"Customers benefit from increased efficiency, improved product quality, and more responsive interactions with businesses.",
 			},
 		],
 	},
@@ -85,8 +103,14 @@ const services = [
 			<div><Banner /></div>
 			<div><Content /></div>
 		</div>
-		{services.map((d, i) => <ServiceCard index={i} {...d}/>)}
+		{services.map((d, i) => <ServiceCard index={i} {...d} />)}
 		<div class="mt-96"><Service /></div>
+		<div><Product /></div>
+		<div><Customers /></div>
+		<div><Testimonials /></div>
+		<div><Partners /></div>
+		<div><Blog /></div>
+		<div><Footer /></div>
 	</div>
 </Layout>
 
